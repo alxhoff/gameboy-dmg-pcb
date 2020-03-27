@@ -286,17 +286,6 @@ Wire Wire Line
 Wire Wire Line
 	8700 2850 9050 2850
 $Comp
-L power:+5V #PWR0113
-U 1 1 5E7ECABF
-P 5850 850
-F 0 "#PWR0113" H 5850 700 50  0001 C CNN
-F 1 "+5V" V 5865 978 50  0000 L CNN
-F 2 "" H 5850 850 50  0001 C CNN
-F 3 "" H 5850 850 50  0001 C CNN
-	1    5850 850 
-	0    1    1    0   
-$EndComp
-$Comp
 L power:GND #PWR0114
 U 1 1 5E7ECE48
 P 4550 950
@@ -911,17 +900,51 @@ Wire Wire Line
 Wire Wire Line
 	5000 900  5000 850 
 Connection ~ 5000 850 
-Wire Wire Line
-	5000 850  5250 850 
 $Comp
 L Switch:SW_DIP_x01 SW1
 U 1 1 5EA31C48
-P 5550 850
-F 0 "SW1" H 5550 1117 50  0000 C CNN
-F 1 "SW_DIP_x01" H 5550 1026 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5550 850 50  0001 C CNN
-F 3 "~" H 5550 850 50  0001 C CNN
-	1    5550 850 
+P 5900 850
+F 0 "SW1" H 5900 1117 50  0000 C CNN
+F 1 "SW_DIP_x01" H 5900 1026 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 5900 850 50  0001 C CNN
+F 3 "~" H 5900 850 50  0001 C CNN
+	1    5900 850 
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:+5V #PWR0113
+U 1 1 5E7ECABF
+P 6400 850
+F 0 "#PWR0113" H 6400 700 50  0001 C CNN
+F 1 "+5V" V 6415 978 50  0000 L CNN
+F 2 "" H 6400 850 50  0001 C CNN
+F 3 "" H 6400 850 50  0001 C CNN
+	1    6400 850 
+	0    1    1    0   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP8
+U 1 1 5EA3FFE3
+P 5900 1150
+F 0 "JP8" H 5900 1355 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 5900 1264 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 5900 1150 50  0001 C CNN
+F 3 "~" H 5900 1150 50  0001 C CNN
+	1    5900 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 850  5600 850 
+Wire Wire Line
+	5600 850  5600 1150
+Wire Wire Line
+	5600 1150 5750 1150
+Connection ~ 5600 850 
+Wire Wire Line
+	6050 1150 6200 1150
+Wire Wire Line
+	6200 1150 6200 850 
+Wire Wire Line
+	6200 850  6400 850 
+Connection ~ 6200 850 
 $EndSCHEMATC
