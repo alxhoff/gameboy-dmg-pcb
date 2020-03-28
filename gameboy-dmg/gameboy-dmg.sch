@@ -449,17 +449,6 @@ Text Label 9050 2150 0    50   ~ 0
 UP
 Text Label 9050 2350 0    50   ~ 0
 LEFT
-$Comp
-L Connector_Generic:Conn_01x02 J3
-U 1 1 5E81943F
-P 8900 1850
-F 0 "J3" H 8980 1842 50  0000 L CNN
-F 1 "Conn_01x02" H 8980 1751 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8900 1850 50  0001 C CNN
-F 3 "~" H 8900 1850 50  0001 C CNN
-	1    8900 1850
-	1    0    0    -1  
-$EndComp
 Text Label 9050 2650 0    50   ~ 0
 START
 Text Label 9050 2550 0    50   ~ 0
@@ -977,4 +966,15 @@ Wire Wire Line
 Wire Wire Line
 	4400 1000 5050 1000
 Connection ~ 5050 1000
+$Comp
+L Connector_Generic:Conn_01x08 J3
+U 1 1 5E9A7474
+P 8900 1550
+F 0 "J3" H 8980 1542 50  0000 L CNN
+F 1 "Conn_01x08" H 8980 1451 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 8900 1550 50  0001 C CNN
+F 3 "~" H 8900 1550 50  0001 C CNN
+	1    8900 1550
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
