@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 2
+Sheet 2 4
 Title ""
 Date ""
 Rev ""
@@ -304,10 +304,10 @@ F 3 "" H 8600 3400 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8600 2500 8600 2700
-Text HLabel 8950 2500 2    50   Input ~ 0
+Text HLabel 9150 2500 2    50   Input ~ 0
 5V_BOOST
 Wire Wire Line
-	8950 2500 8800 2500
+	9150 2500 8800 2500
 Connection ~ 8600 2500
 Wire Wire Line
 	7650 3450 7500 3450
@@ -346,8 +346,6 @@ $EndComp
 Connection ~ 8800 2500
 Wire Wire Line
 	8800 2500 8600 2500
-Wire Wire Line
-	8800 2700 8800 3100
 Connection ~ 6250 3700
 Connection ~ 7500 3000
 Wire Wire Line
@@ -459,12 +457,140 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0131
 U 1 1 5E8B6045
-P 8800 3100
-F 0 "#PWR0131" H 8800 2850 50  0001 C CNN
-F 1 "GND" H 8805 2927 50  0000 C CNN
-F 2 "" H 8800 3100 50  0001 C CNN
-F 3 "" H 8800 3100 50  0001 C CNN
-	1    8800 3100
+P 8800 2700
+F 0 "#PWR0131" H 8800 2450 50  0001 C CNN
+F 1 "GND" H 8805 2527 50  0000 C CNN
+F 2 "" H 8800 2700 50  0001 C CNN
+F 3 "" H 8800 2700 50  0001 C CNN
+	1    8800 2700
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5E8A7B6E
+P 5100 5700
+AR Path="/5E8A7B6E" Ref="R?"  Part="1" 
+AR Path="/5E7FB568/5E8A7B6E" Ref="R1"  Part="1" 
+F 0 "R1" H 5159 5746 50  0000 L CNN
+F 1 "1K" H 5159 5655 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 5100 5700 50  0001 C CNN
+F 3 "~" H 5100 5700 50  0001 C CNN
+	1    5100 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5E8A7B74
+P 4900 6100
+AR Path="/5E8A7B74" Ref="D?"  Part="1" 
+AR Path="/5E7FB568/5E8A7B74" Ref="D1"  Part="1" 
+F 0 "D1" V 4939 5983 50  0000 R CNN
+F 1 "LED" V 4848 5983 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 4900 6100 50  0001 C CNN
+F 3 "~" H 4900 6100 50  0001 C CNN
+	1    4900 6100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 5E8A7B7A
+P 5250 6100
+AR Path="/5E8A7B7A" Ref="D?"  Part="1" 
+AR Path="/5E7FB568/5E8A7B7A" Ref="D2"  Part="1" 
+F 0 "D2" V 5289 5983 50  0000 R CNN
+F 1 "LED" V 5198 5983 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm" H 5250 6100 50  0001 C CNN
+F 3 "~" H 5250 6100 50  0001 C CNN
+	1    5250 6100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4900 5950 5100 5950
+$Comp
+L power:GND #PWR?
+U 1 1 5E8A7B81
+P 5100 6400
+AR Path="/5E8A7B81" Ref="#PWR?"  Part="1" 
+AR Path="/5E7FB568/5E8A7B81" Ref="#PWR0101"  Part="1" 
+F 0 "#PWR0101" H 5100 6150 50  0001 C CNN
+F 1 "GND" H 5105 6227 50  0000 C CNN
+F 2 "" H 5100 6400 50  0001 C CNN
+F 3 "" H 5100 6400 50  0001 C CNN
+	1    5100 6400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 6250 5100 6250
+Wire Wire Line
+	5100 6250 5100 6400
+Wire Wire Line
+	5100 6250 5250 6250
+Connection ~ 5100 6250
+Wire Wire Line
+	5100 5800 5100 5950
+Connection ~ 5100 5950
+Wire Wire Line
+	5100 5950 5250 5950
+$Comp
+L Switch:SW_DIP_x01 SW?
+U 1 1 5E8A7B8E
+P 4550 5500
+AR Path="/5E8A7B8E" Ref="SW?"  Part="1" 
+AR Path="/5E7FB568/5E8A7B8E" Ref="SW1"  Part="1" 
+F 0 "SW1" H 4550 5767 50  0000 C CNN
+F 1 "SW_DIP_x01" H 4550 5676 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4550 5500 50  0001 C CNN
+F 3 "~" H 4550 5500 50  0001 C CNN
+	1    4550 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5E8A7B94
+P 5300 5500
+AR Path="/5E8A7B94" Ref="#PWR?"  Part="1" 
+AR Path="/5E7FB568/5E8A7B94" Ref="#PWR0102"  Part="1" 
+F 0 "#PWR0102" H 5300 5350 50  0001 C CNN
+F 1 "+5V" V 5315 5628 50  0000 L CNN
+F 2 "" H 5300 5500 50  0001 C CNN
+F 3 "" H 5300 5500 50  0001 C CNN
+	1    5300 5500
+	0    1    1    0   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP?
+U 1 1 5E8A7B9A
+P 4550 5900
+AR Path="/5E8A7B9A" Ref="JP?"  Part="1" 
+AR Path="/5E7FB568/5E8A7B9A" Ref="JP8"  Part="1" 
+F 0 "JP8" H 4550 6105 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 4550 6014 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 4550 5900 50  0001 C CNN
+F 3 "~" H 4550 5900 50  0001 C CNN
+	1    4550 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 5500 4250 5900
+Wire Wire Line
+	4250 5900 4400 5900
+Wire Wire Line
+	4700 5900 4850 5900
+Wire Wire Line
+	4850 5900 4850 5500
+Wire Wire Line
+	4850 5500 5100 5500
+Connection ~ 4850 5500
+Wire Wire Line
+	5100 5600 5100 5500
+Connection ~ 5100 5500
+Wire Wire Line
+	5100 5500 5300 5500
+Wire Wire Line
+	4000 5500 4250 5500
+Connection ~ 4250 5500
+Text HLabel 4000 5500 0    50   Input ~ 0
+5V_BOOST
+Text Notes 4000 6300 0    50   ~ 0
+Power Switch
 $EndSCHEMATC
