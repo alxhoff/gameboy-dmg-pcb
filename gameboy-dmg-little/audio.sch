@@ -1,0 +1,424 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R R2
+U 1 1 5E819B2F
+P 3550 4000
+F 0 "R2" V 3343 4000 50  0000 C CNN
+F 1 "270R" V 3434 4000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3480 4000 50  0001 C CNN
+F 3 "~" H 3550 4000 50  0001 C CNN
+	1    3550 4000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5E819B35
+P 4350 4200
+F 0 "R3" H 4280 4154 50  0000 R CNN
+F 1 "150R" H 4280 4245 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4280 4200 50  0001 C CNN
+F 3 "~" H 4350 4200 50  0001 C CNN
+	1    4350 4200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 5E819B3B
+P 3950 4200
+F 0 "C1" H 4042 4246 50  0000 L CNN
+F 1 "33nF" H 4042 4155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3950 4200 50  0001 C CNN
+F 3 "~" H 3950 4200 50  0001 C CNN
+	1    3950 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5E819B41
+P 4700 4000
+F 0 "C2" V 4471 4000 50  0000 C CNN
+F 1 "10uF" V 4562 4000 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 4700 4000 50  0001 C CNN
+F 3 "~" H 4700 4000 50  0001 C CNN
+	1    4700 4000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4600 4000 4350 4000
+Wire Wire Line
+	3950 4100 3950 4000
+Connection ~ 3950 4000
+Wire Wire Line
+	3950 4000 3700 4000
+Wire Wire Line
+	4350 4050 4350 4000
+Connection ~ 4350 4000
+Wire Wire Line
+	4350 4000 3950 4000
+Wire Wire Line
+	3950 4300 3950 4450
+Wire Wire Line
+	3950 4450 4150 4450
+Wire Wire Line
+	4350 4450 4350 4350
+$Comp
+L power:GND #PWR0103
+U 1 1 5E819B51
+P 4150 4500
+F 0 "#PWR0103" H 4150 4250 50  0001 C CNN
+F 1 "GND" H 4155 4327 50  0000 C CNN
+F 2 "" H 4150 4500 50  0001 C CNN
+F 3 "" H 4150 4500 50  0001 C CNN
+	1    4150 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 4500 4150 4450
+Connection ~ 4150 4450
+Wire Wire Line
+	4150 4450 4350 4450
+Wire Wire Line
+	3050 4000 3400 4000
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 5E819B5E
+P 10000 4250
+F 0 "J1" H 10080 4242 50  0000 L CNN
+F 1 "Conn_01x02" H 10080 4151 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 10000 4250 50  0001 C CNN
+F 3 "~" H 10000 4250 50  0001 C CNN
+	1    10000 4250
+	1    0    0    -1  
+$EndComp
+Text HLabel 3050 4000 0    50   Input ~ 0
+AUDIO_IN
+$Comp
+L Jumper:SolderJumper_2_Open JP10
+U 1 1 5E9290A5
+P 6250 4000
+F 0 "JP10" H 6250 3900 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 6250 3866 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 6250 4000 50  0001 C CNN
+F 3 "~" H 6250 4000 50  0001 C CNN
+	1    6250 4000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Amplifier_Audio:PAM8302AAS U6
+U 1 1 5E934AEC
+P 8800 4450
+F 0 "U6" H 8950 4900 50  0000 C CNN
+F 1 "PAM8302AAS" H 8500 4900 50  0000 C CNN
+F 2 "Package_SO:MSOP-8_3x3mm_P0.65mm" H 8800 4450 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/PAM8302A.pdf" H 8800 4450 50  0001 C CNN
+	1    8800 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C7
+U 1 1 5E93A5D5
+P 7050 4250
+F 0 "C7" H 7142 4296 50  0000 L CNN
+F 1 "1u" H 7142 4205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7050 4250 50  0001 C CNN
+F 3 "~" H 7050 4250 50  0001 C CNN
+	1    7050 4250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C_Small C8
+U 1 1 5E93AB5B
+P 7050 4450
+F 0 "C8" H 7142 4496 50  0000 L CNN
+F 1 "1u" H 7142 4405 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7050 4450 50  0001 C CNN
+F 3 "~" H 7050 4450 50  0001 C CNN
+	1    7050 4450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 5E93AFC7
+P 7450 4250
+F 0 "R11" V 7243 4250 50  0000 C CNN
+F 1 "100R" V 7334 4250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 7380 4250 50  0001 C CNN
+F 3 "~" H 7450 4250 50  0001 C CNN
+	1    7450 4250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 5E93B664
+P 7450 4450
+F 0 "R12" V 7243 4450 50  0000 C CNN
+F 1 "100R" V 7334 4450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 7380 4450 50  0001 C CNN
+F 3 "~" H 7450 4450 50  0001 C CNN
+	1    7450 4450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7150 4250 7300 4250
+Wire Wire Line
+	7150 4450 7300 4450
+$Comp
+L Jumper:SolderJumper_2_Open JP12
+U 1 1 5E93C460
+P 8450 3600
+F 0 "JP12" H 8450 3375 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 8450 3466 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 8450 3600 50  0001 C CNN
+F 3 "~" H 8450 3600 50  0001 C CNN
+	1    8450 3600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP13
+U 1 1 5E93CBBA
+P 9050 3600
+F 0 "JP13" V 9004 3668 50  0000 L CNN
+F 1 "SolderJumper_2_Bridged" V 9095 3668 50  0001 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 9050 3600 50  0001 C CNN
+F 3 "~" H 9050 3600 50  0001 C CNN
+	1    9050 3600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8450 3750 8800 3750
+Wire Wire Line
+	8800 4050 8800 3750
+Connection ~ 8800 3750
+Wire Wire Line
+	8800 3750 9050 3750
+$Comp
+L power:+5V #PWR0125
+U 1 1 5E941034
+P 9050 3450
+F 0 "#PWR0125" H 9050 3300 50  0001 C CNN
+F 1 "+5V" H 9065 3623 50  0000 C CNN
+F 2 "" H 9050 3450 50  0001 C CNN
+F 3 "" H 9050 3450 50  0001 C CNN
+	1    9050 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0132
+U 1 1 5E94182F
+P 8450 3450
+F 0 "#PWR0132" H 8450 3300 50  0001 C CNN
+F 1 "+3.3V" H 8465 3623 50  0000 C CNN
+F 2 "" H 8450 3450 50  0001 C CNN
+F 3 "" H 8450 3450 50  0001 C CNN
+	1    8450 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 4250 8400 4250
+Wire Wire Line
+	7600 4450 8400 4450
+$Comp
+L Device:R R13
+U 1 1 5E94290C
+P 8100 4650
+F 0 "R13" V 7893 4650 50  0000 C CNN
+F 1 "10K" V 7984 4650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 8030 4650 50  0001 C CNN
+F 3 "~" H 8100 4650 50  0001 C CNN
+	1    8100 4650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C_Small C9
+U 1 1 5E94425F
+P 8150 3750
+F 0 "C9" H 8242 3796 50  0000 L CNN
+F 1 "10u" H 8242 3705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8150 3750 50  0001 C CNN
+F 3 "~" H 8150 3750 50  0001 C CNN
+	1    8150 3750
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0133
+U 1 1 5E945113
+P 8050 3750
+F 0 "#PWR0133" H 8050 3500 50  0001 C CNN
+F 1 "GND" H 8055 3577 50  0000 C CNN
+F 2 "" H 8050 3750 50  0001 C CNN
+F 3 "" H 8050 3750 50  0001 C CNN
+	1    8050 3750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8250 3750 8450 3750
+Connection ~ 8450 3750
+Wire Wire Line
+	8250 4650 8400 4650
+Text Label 9300 3750 0    50   ~ 0
+Audio_Vdd
+Wire Wire Line
+	9300 3750 9050 3750
+Connection ~ 9050 3750
+Text Label 7750 4650 3    50   ~ 0
+Audio_Vdd
+Wire Wire Line
+	7750 4650 7950 4650
+$Comp
+L power:GND #PWR0134
+U 1 1 5E946F96
+P 8800 4850
+F 0 "#PWR0134" H 8800 4600 50  0001 C CNN
+F 1 "GND" H 8805 4677 50  0000 C CNN
+F 2 "" H 8800 4850 50  0001 C CNN
+F 3 "" H 8800 4850 50  0001 C CNN
+	1    8800 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C10
+U 1 1 5E94B1E5
+P 9400 4700
+F 0 "C10" H 9492 4746 50  0000 L CNN
+F 1 "220p" H 9492 4655 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 9400 4700 50  0001 C CNN
+F 3 "~" H 9400 4700 50  0001 C CNN
+	1    9400 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C11
+U 1 1 5E94B94A
+P 9650 4950
+F 0 "C11" H 9742 4996 50  0000 L CNN
+F 1 "220p" H 9742 4905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 9650 4950 50  0001 C CNN
+F 3 "~" H 9650 4950 50  0001 C CNN
+	1    9650 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9200 4250 9400 4250
+Wire Wire Line
+	9800 4450 9650 4450
+Wire Wire Line
+	9800 4350 9800 4450
+Wire Wire Line
+	9400 4600 9400 4250
+Connection ~ 9400 4250
+Wire Wire Line
+	9400 4250 9800 4250
+Wire Wire Line
+	9650 4850 9650 4450
+Connection ~ 9650 4450
+Wire Wire Line
+	9650 4450 9200 4450
+$Comp
+L power:GND #PWR0135
+U 1 1 5E94D098
+P 9400 4800
+F 0 "#PWR0135" H 9400 4550 50  0001 C CNN
+F 1 "GND" H 9405 4627 50  0000 C CNN
+F 2 "" H 9400 4800 50  0001 C CNN
+F 3 "" H 9400 4800 50  0001 C CNN
+	1    9400 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0136
+U 1 1 5E94D4F0
+P 9650 5050
+F 0 "#PWR0136" H 9650 4800 50  0001 C CNN
+F 1 "GND" H 9655 4877 50  0000 C CNN
+F 2 "" H 9650 5050 50  0001 C CNN
+F 3 "" H 9650 5050 50  0001 C CNN
+	1    9650 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Open JP14
+U 1 1 5E836F0B
+P 6500 4800
+F 0 "JP14" H 6500 4700 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 6500 4666 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 6500 4800 50  0001 C CNN
+F 3 "~" H 6500 4800 50  0001 C CNN
+	1    6500 4800
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5E838D4A
+P 6500 4950
+F 0 "#PWR0104" H 6500 4700 50  0001 C CNN
+F 1 "GND" H 6505 4777 50  0000 C CNN
+F 2 "" H 6500 4950 50  0001 C CNN
+F 3 "" H 6500 4950 50  0001 C CNN
+	1    6500 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 4000 6100 4000
+Connection ~ 5950 4000
+Wire Wire Line
+	6500 4000 6500 4250
+Wire Wire Line
+	6500 4250 6950 4250
+Wire Wire Line
+	6500 4650 6500 4450
+Wire Wire Line
+	6500 4450 6950 4450
+Text Notes 5850 5400 0    50   ~ 0
+Vol pot and skip
+Text Notes 3450 4500 0    50   ~ 0
+LP filter
+Text Notes 8400 5250 0    50   ~ 0
+2.5W mono amp
+$Comp
+L gameboy_power:RK10J_POT P1
+U 1 1 5E85AA44
+P 5500 4200
+F 0 "P1" H 5550 4300 50  0000 C CNN
+F 1 "RK10J_POT" H 5900 3750 50  0000 C CNN
+F 2 "pad:R503_POT" H 5500 4200 50  0001 C CNN
+F 3 "" H 5500 4200 50  0001 C CNN
+	1    5500 4200
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 4250 5950 4250
+Wire Wire Line
+	5950 4000 5950 4250
+Wire Wire Line
+	5850 4450 6150 4450
+Wire Wire Line
+	6150 4450 6150 4250
+Wire Wire Line
+	6150 4250 6500 4250
+Connection ~ 6500 4250
+Wire Wire Line
+	5450 4650 6350 4650
+Wire Wire Line
+	6350 4650 6350 4450
+Wire Wire Line
+	6350 4450 6500 4450
+Connection ~ 6500 4450
+Wire Wire Line
+	4800 4000 5950 4000
+Wire Wire Line
+	6500 4000 6400 4000
+$EndSCHEMATC
