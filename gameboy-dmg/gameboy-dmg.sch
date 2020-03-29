@@ -521,10 +521,10 @@ Connection ~ 9050 2150
 Wire Wire Line
 	9050 2150 9250 2150
 $Comp
-L Jumper:SolderJumper_2_Open JP?
+L Jumper:SolderJumper_2_Open JP1
 U 1 1 5E850359
 P 4300 3300
-F 0 "JP?" H 4300 3505 50  0000 C CNN
+F 0 "JP1" H 4300 3505 50  0000 C CNN
 F 1 "SolderJumper_2_Open" H 4300 3414 50  0000 C CNN
 F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 4300 3300 50  0001 C CNN
 F 3 "~" H 4300 3300 50  0001 C CNN
