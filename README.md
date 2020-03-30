@@ -27,7 +27,70 @@ The board utilizes the PWM audio output of the RPi, providing both a simple low-
 
 ## Screen breakout
 
-The board utilizes the ILI9341 TFT screen which is a breeze to use with Raspberry Pis through framebuffer copy drivers, such as [this](https://github.com/juj/fbcp-ili9341) one. The smaller board provides a through hole breakout where you can connect, via ribbon cable, the screen's breakout board. I am using a 2.4" screen which requires no modification to the case but larger screens can be placed with minimal modification to the case, these breakouts are available on the larger board, connecting the ribbon cable directly to the board.
+The board utilizes the 240 x 320 ILI9341 TFT screens which are a breeze to use with Raspberry Pis through framebuffer copy drivers, such as [this](https://github.com/juj/fbcp-ili9341) one. The smaller board provides a through hole breakout where you can connect, via ribbon cable, the screen's breakout board. I am using a 2.4" screen which requires no modification to the case but larger screens can be placed with minimal modification to the case, these breakouts are available on the larger board, connecting the ribbon cable directly to the board. The larger board uses an elongated footprint to give you complete freedom as to where you solder the board along the horizonal axis.
+
+### Small board
+
+The small PCB provides an exact copy of the pinout found on the common LCD breakout boards such as [3.2" MSP3218](http://www.lcdwiki.com/3.2inch_SPI_Module_ILI9341_SKU:MSP3218), [2.8" MSP2807](http://www.lcdwiki.com/2.8inch_SPI_Module_ILI9341_SKU:MSP2807), [2.4" MSP2402](http://www.lcdwiki.com/2.4inch_SPI_Module_ILI9341_SKU:MSP2402), and [2.2" MSP2202](http://www.lcdwiki.com/2.2inch_SPI_Module_ILI9341_SKU:MSP2202). 
+
+These common breakouts also provide a NPN transisor current driver circuit that allow for PWM control on the backlight. The larger board has this on the motherboard.
+
+| Function        | Header Pin           | 
+| ------------- |:-------------:| 
+| MISO      | 1 | 
+| BACKLIGHT/LED      | 2      |  
+| SCK | 3      |   
+| MOSI      | 4 |
+| DC      | 5 |
+| RESET      | 6 |
+| CS      | 7 |
+| GND      | 8 |
+| 3.3V      | 9 |
+
+### Large board
+
+The large board uses a header for the ribbon cable to be connected directly. The pinout is as follows. Also see the [relevant](http://www.lcdwiki.com/res/MSP3218/QD-TFT3202%20specification_v1.1.pdf) datasheets for the pinout
+
+| Function        | Header Pin           | 
+| ------------- |:-------------:| 
+| GND      | 1 | 
+| RESET      | 2      |  
+| SCK | 3      |   
+| DC      | 4 |
+| CS      | 5 |
+| MOSI      | 6 |
+| MISO      | 7 |
+| GND      | 8 |
+| 3.3V      | 9 |
+| BACKLIGHT LED Anode      | 10 |
+| BACKLIGHT LED Cathode      | 11 - 14|
+
+
+# Small board
+
+The small board must provide headers for items that are found outside of the PCB's bounds, such as power switch, power LED etc. All of the headers should be labelled as to what they do.
+
+There are a number of labeled jumpers that enable/disable functionality of external parts such as disabling the external power switch by bridging the boost supply's outbut stright to the 5V rail.
+
+The following jumpers can be found on the board.
+
+| Name |Reference       | Description           | Default State | Notes & WARNINGS!|
+| ------------- |:--------:|-------------|:-------------:| ----- |
+| Charging LEDs | JP11 | Enables the two onboard SMD LEDs that provide the status of charging from the TP4056 charger | Open |
+| Connect Boost  | JP9 | Connects the battery charger/battery to the boost charger that then supplies the 5V rail | Open |
+| Power switch  | JP8 | Shorts out the power switch, making the boost supply and the 5V rail always connected  | Open |
+| Volume potentiometer  | JP10 & JP14 | Will fix the audio input to the PAM8302 audio amp to the differential signal between the LP audio filter's output and ground, removing ability to control volume in hardware| Open |
+| PAM8302 Supply 3.3V  | JP12 | Allows for the powering of the audio amplifier from 3.3V instead of the default 5V | Open |
+| PAM8302 Supply 3.3V  | JP13 | Allows for the disconnecting of the audio amplifier from its default 5V supply | Closed | NEVER should both jumpers be connects and the device powered |
+| GPIO Expander I2C  | JP2 - JP4 | The GPIO expander responsible for the onboard Gameboy buttons is by default not attached to the RPi | Open |
+| TFT Backlight  | JP6 & JP7 | The backlight for the LCD can be either driven by the GPIO pins (allowing PWM) or from a constant 3.3V rail, By default the screen is driven from the 3.3V rail, thus disabling PWM capabilities of the FB driver | Open & Closer respectivley | Both pins shouldn't be connected at the same time |
+| RPi Audio Out  | JP1 | By default the PWM audio output of the PRi's GPIO 13 is not connected to the audio pre-amp, amp and speaker, this must be enabled by the user | Open |
+
+
+
+# Large board
+
+todo
 
 ## RPi header
 

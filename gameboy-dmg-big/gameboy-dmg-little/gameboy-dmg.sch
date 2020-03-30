@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 5
+Sheet 1 4
 Title ""
 Date ""
 Rev ""
@@ -192,19 +192,54 @@ Wire Wire Line
 Connection ~ 2700 3800
 Wire Wire Line
 	2700 3800 2800 3800
-Text Notes 8400 4550 0    50   ~ 0
+$Comp
+L Connector_Generic:Conn_01x09 J6
+U 1 1 5E90CA1D
+P 10200 3800
+F 0 "J6" H 10280 3842 50  0000 L CNN
+F 1 "Conn_01x09" H 10280 3751 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical" H 10200 3800 50  0001 C CNN
+F 3 "~" H 10200 3800 50  0001 C CNN
+	1    10200 3800
+	1    0    0    -1  
+$EndComp
+Text Notes 9400 4450 0    50   ~ 0
 2.4 TFT ILI9341 Screen
-Text Label 8250 4100 2    50   ~ 0
+Text Label 9400 3400 0    50   ~ 0
 TFT_MISO
-Text Label 8250 4000 2    50   ~ 0
+Text Label 9400 3500 0    50   ~ 0
+TFT_BACKLIGHT
+Text Label 9400 3700 0    50   ~ 0
 TFT_MOSI
-Text Label 8250 3600 2    50   ~ 0
+Text Label 9400 3900 0    50   ~ 0
 TFT_RESET
-Text Label 8250 3900 2    50   ~ 0
+Text Label 9400 4000 0    50   ~ 0
 TFT_CS
-Text Label 8250 3700 2    50   ~ 0
+$Comp
+L power:+3.3V #PWR0121
+U 1 1 5E913425
+P 9600 4200
+F 0 "#PWR0121" H 9600 4050 50  0001 C CNN
+F 1 "+3.3V" V 9615 4328 50  0000 L CNN
+F 2 "" H 9600 4200 50  0001 C CNN
+F 3 "" H 9600 4200 50  0001 C CNN
+	1    9600 4200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0122
+U 1 1 5E913D2D
+P 9600 4100
+F 0 "#PWR0122" H 9600 3850 50  0001 C CNN
+F 1 "GND" V 9605 3972 50  0000 R CNN
+F 2 "" H 9600 4100 50  0001 C CNN
+F 3 "" H 9600 4100 50  0001 C CNN
+	1    9600 4100
+	0    1    1    0   
+$EndComp
+Text Label 9400 3600 0    50   ~ 0
 TFT_SCK
-Text Label 8250 3800 2    50   ~ 0
+Text Label 9400 3800 0    50   ~ 0
 TFT_DC
 Text Label 4700 3300 0    50   ~ 0
 PWM_AUDIO_OUT
@@ -218,8 +253,37 @@ Text Label 3300 3000 0    50   ~ 0
 TFT_SCK
 Text Label 3300 2700 0    50   ~ 0
 TFT_CS
+$Comp
+L power:+3.3V #PWR0123
+U 1 1 5E91E583
+P 9050 2150
+F 0 "#PWR0123" H 9050 2000 50  0001 C CNN
+F 1 "+3.3V" V 9065 2278 50  0000 L CNN
+F 2 "" H 9050 2150 50  0001 C CNN
+F 3 "" H 9050 2150 50  0001 C CNN
+	1    9050 2150
+	-1   0    0    1   
+$EndComp
 Text Label 1700 3000 2    50   ~ 0
 TFT_RESET
+Wire Wire Line
+	9400 3400 10000 3400
+Wire Wire Line
+	9400 3500 10000 3500
+Wire Wire Line
+	9400 3600 10000 3600
+Wire Wire Line
+	9400 3700 10000 3700
+Wire Wire Line
+	9400 3800 10000 3800
+Wire Wire Line
+	9400 3900 10000 3900
+Wire Wire Line
+	9400 4000 10000 4000
+Wire Wire Line
+	9600 4100 10000 4100
+Wire Wire Line
+	9600 4200 10000 4200
 Text Label 9850 1400 0    50   ~ 0
 GPIO_SDA
 Text Label 3300 1900 0    50   ~ 0
@@ -314,6 +378,45 @@ Wire Wire Line
 	9550 1600 9850 1600
 Text Label 1700 3100 2    50   ~ 0
 TFT_BACKLIGHT_GPIO
+Text Label 8900 1950 2    50   ~ 0
+TFT_BACKLIGHT_GPIO
+Text Label 8900 2150 2    50   ~ 0
+TFT_BACKLIGHT_Vcc
+$Comp
+L Jumper:SolderJumper_2_Open JP6
+U 1 1 5E9AF2D1
+P 9400 1950
+F 0 "JP6" H 9400 2155 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 9400 2064 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 9400 1950 50  0001 C CNN
+F 3 "~" H 9400 1950 50  0001 C CNN
+	1    9400 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP7
+U 1 1 5E9AFFEA
+P 9400 2150
+F 0 "JP7" H 9400 2355 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 9400 2264 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 9400 2150 50  0001 C CNN
+F 3 "~" H 9400 2150 50  0001 C CNN
+	1    9400 2150
+	1    0    0    -1  
+$EndComp
+Text Label 10250 2100 0    50   ~ 0
+TFT_BACKLIGHT
+Wire Wire Line
+	8900 2150 9050 2150
+Wire Wire Line
+	8900 1950 9250 1950
+Wire Wire Line
+	9550 1950 9550 2100
+Wire Wire Line
+	10250 2100 9550 2100
+Connection ~ 9550 2100
+Wire Wire Line
+	9550 2100 9550 2150
 Wire Wire Line
 	4150 3300 3300 3300
 Wire Wire Line
@@ -414,6 +517,9 @@ Wire Wire Line
 	4150 6400 4350 6400
 Text Notes 5750 5750 0    50   ~ 0
 Battery Connector
+Connection ~ 9050 2150
+Wire Wire Line
+	9050 2150 9250 2150
 $Comp
 L Jumper:SolderJumper_2_Open JP1
 U 1 1 5E850359
@@ -425,82 +531,4 @@ F 3 "~" H 4300 3300 50  0001 C CNN
 	1    4300 3300
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector:USB_A J2
-U 1 1 5E82A075
-P 5400 1650
-F 0 "J2" H 5457 2117 50  0000 C CNN
-F 1 "USB_A" H 5457 2026 50  0000 C CNN
-F 2 "Connector_USB:USB_A_Stewart_SS-52100-001_Horizontal" H 5550 1600 50  0001 C CNN
-F 3 " ~" H 5550 1600 50  0001 C CNN
-	1    5400 1650
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x04 J4
-U 1 1 5E82AB97
-P 6250 1550
-F 0 "J4" H 6330 1542 50  0000 L CNN
-F 1 "Conn_01x04" H 6330 1451 50  0000 L CNN
-F 2 "Connector_PinHeader_1.27mm:PinHeader_1x04_P1.27mm_Vertical" H 6250 1550 50  0001 C CNN
-F 3 "~" H 6250 1550 50  0001 C CNN
-	1    6250 1550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5700 1450 6050 1450
-Wire Wire Line
-	5700 1750 5900 1750
-Wire Wire Line
-	5400 2050 6050 2050
-Wire Wire Line
-	6050 2050 6050 1750
-Wire Wire Line
-	5300 2050 5400 2050
-Connection ~ 5400 2050
-$Comp
-L power:GND #PWR0117
-U 1 1 5E8374D9
-P 6050 2050
-F 0 "#PWR0117" H 6050 1800 50  0001 C CNN
-F 1 "GND" H 6055 1877 50  0000 C CNN
-F 2 "" H 6050 2050 50  0001 C CNN
-F 3 "" H 6050 2050 50  0001 C CNN
-	1    6050 2050
-	1    0    0    -1  
-$EndComp
-Connection ~ 6050 2050
-Wire Wire Line
-	5900 1550 6050 1550
-Wire Wire Line
-	5900 1550 5900 1750
-Wire Wire Line
-	5700 1650 6050 1650
-$Sheet
-S 8250 3350 1150 950 
-U 5E830485
-F0 "MSP_LCD" 50
-F1 "MSP_LCD.sch" 50
-F2 "MSP_TFT_VCC" I L 8250 3400 50 
-F3 "MSP_TFT_RST" I L 8250 3600 50 
-F4 "MSP_TFT_SCK" I L 8250 3700 50 
-F5 "MSP_TFT_DC" I L 8250 3800 50 
-F6 "MSP_TFT_CS" I L 8250 3900 50 
-F7 "MSP_TFT_MOSI" I L 8250 4000 50 
-F8 "MSP_TFT_MISO" I L 8250 4100 50 
-F9 "MSP_TFT_LED" I L 8250 4200 50 
-$EndSheet
-$Comp
-L power:+5V #PWR0121
-U 1 1 5E86E3F2
-P 8250 3400
-F 0 "#PWR0121" H 8250 3250 50  0001 C CNN
-F 1 "+5V" V 8265 3528 50  0000 L CNN
-F 2 "" H 8250 3400 50  0001 C CNN
-F 3 "" H 8250 3400 50  0001 C CNN
-	1    8250 3400
-	0    -1   -1   0   
-$EndComp
-Text Label 8250 4200 2    50   ~ 0
-TFT_BACKLIGHT_GPIO
 $EndSCHEMATC

@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 5
+Sheet 2 4
 Title ""
 Date ""
 Rev ""
@@ -491,6 +491,19 @@ F 3 "~" H 4900 6100 50  0001 C CNN
 	1    4900 6100
 	0    -1   -1   0   
 $EndComp
+$Comp
+L Device:LED D?
+U 1 1 5E8A7B7A
+P 5250 6100
+AR Path="/5E8A7B7A" Ref="D?"  Part="1" 
+AR Path="/5E7FB568/5E8A7B7A" Ref="D2"  Part="1" 
+F 0 "D2" V 5289 5983 50  0000 R CNN
+F 1 "LED" V 5198 5983 50  0000 R CNN
+F 2 "LED_THT:LED_D3.0mm" H 5250 6100 50  0001 C CNN
+F 3 "~" H 5250 6100 50  0001 C CNN
+	1    5250 6100
+	0    -1   -1   0   
+$EndComp
 Wire Wire Line
 	4900 5950 5100 5950
 $Comp
@@ -511,7 +524,26 @@ Wire Wire Line
 Wire Wire Line
 	5100 6250 5100 6400
 Wire Wire Line
+	5100 6250 5250 6250
+Connection ~ 5100 6250
+Wire Wire Line
 	5100 5800 5100 5950
+Connection ~ 5100 5950
+Wire Wire Line
+	5100 5950 5250 5950
+$Comp
+L Switch:SW_DIP_x01 SW?
+U 1 1 5E8A7B8E
+P 4550 5500
+AR Path="/5E8A7B8E" Ref="SW?"  Part="1" 
+AR Path="/5E7FB568/5E8A7B8E" Ref="SW1"  Part="1" 
+F 0 "SW1" H 4550 5767 50  0000 C CNN
+F 1 "SW_DIP_x01" H 4550 5676 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4550 5500 50  0001 C CNN
+F 3 "~" H 4550 5500 50  0001 C CNN
+	1    4550 5500
+	1    0    0    -1  
+$EndComp
 $Comp
 L power:+5V #PWR?
 U 1 1 5E8A7B94
@@ -539,6 +571,8 @@ F 3 "~" H 4550 5900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
+	4250 5500 4250 5900
+Wire Wire Line
 	4250 5900 4400 5900
 Wire Wire Line
 	4700 5900 4850 5900
@@ -546,34 +580,17 @@ Wire Wire Line
 	4850 5900 4850 5500
 Wire Wire Line
 	4850 5500 5100 5500
+Connection ~ 4850 5500
 Wire Wire Line
 	5100 5600 5100 5500
 Connection ~ 5100 5500
 Wire Wire Line
 	5100 5500 5300 5500
-Text HLabel 3950 5400 0    50   Input ~ 0
+Wire Wire Line
+	4000 5500 4250 5500
+Connection ~ 4250 5500
+Text HLabel 4000 5500 0    50   Input ~ 0
 5V_BOOST
 Text Notes 4000 6300 0    50   ~ 0
 Power Switch
-Wire Wire Line
-	4350 5400 4250 5400
-Wire Wire Line
-	4250 5400 4250 5900
-Connection ~ 4250 5400
-Wire Wire Line
-	4250 5400 3950 5400
-Wire Wire Line
-	4750 5500 4850 5500
-Connection ~ 4850 5500
-$Comp
-L Switch:SW_DPDT_x2 SW1
-U 1 1 5E8142E3
-P 4550 5400
-F 0 "SW1" H 4550 5075 50  0000 C CNN
-F 1 "SW_DPDT_x2" H 4550 5166 50  0000 C CNN
-F 2 "pad:SS12F23" H 4550 5400 50  0001 C CNN
-F 3 "~" H 4550 5400 50  0001 C CNN
-	1    4550 5400
-	1    0    0    1   
-$EndComp
 $EndSCHEMATC
