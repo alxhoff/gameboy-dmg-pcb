@@ -1,0 +1,387 @@
+!PADS-POWERPCB-V2.0-MILS!
+*PART*
+ U1 Package_SO:SOIC-28W_7.5x17.9mm_P1.27mm
+ J5 Connector_PinHeader_2.54mm:PinHeader_2x20_P2.54mm_Vertical
+ JP4 Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm
+ JP3 Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm
+ JP2 Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm
+ JP5 Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm
+ J8 Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical
+ J3 Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical
+ JP1 Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm
+ J2 Connector_USB:USB_A_Stewart_SS-52100-001_Horizontal
+ J4 Connector_PinHeader_1.27mm:PinHeader_1x04_P1.27mm_Vertical
+ U2 Package_SO:SOP-8_3.9x4.9mm_P1.27mm
+ U5 Package_TO_SOT_SMD:SOT-23-6
+ R6 Resistor_SMD:R_0603_1608Metric
+ R5 Resistor_SMD:R_0603_1608Metric
+ R4 Resistor_SMD:R_0603_1608Metric
+ D4 LED_SMD:LED_0603_1608Metric
+ D3 LED_SMD:LED_0603_1608Metric
+ R7 Resistor_SMD:R_0603_1608Metric
+ U4 Package_TO_SOT_SMD:SOT-23-6
+ C3 Capacitor_SMD:C_0603_1608Metric
+ JP9 Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm
+ C4 Capacitor_SMD:C_1210_3225Metric
+ L1 Inductor_SMD:L_7.3x7.3_H3.5
+ D5 Diode_SMD:D_SMA
+ R9 Resistor_SMD:R_0603_1608Metric
+ R10 Resistor_SMD:R_0603_1608Metric
+ C6 Capacitor_SMD:C_1210_3225Metric
+ R8 Resistor_SMD:R_0603_1608Metric
+ U3 Package_TO_SOT_SMD:SOT-23-6
+ JP11 Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm
+ C5 Capacitor_SMD:C_0603_1608Metric
+ J7 Connector_USB:USB_Micro-B_Molex-105017-0001
+ R1 Resistor_SMD:R_0603_1608Metric
+ D1 LED_SMD:LED_0603_1608Metric
+ JP8 Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm
+ SW1 pad:SS12F23
+ R2 Resistor_SMD:R_0603_1608Metric
+ R3 Resistor_SMD:R_0603_1608Metric
+ C1 Capacitor_SMD:C_0603_1608Metric
+ C2 Capacitor_THT:CP_Radial_D5.0mm_P2.00mm
+ J1 Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical
+ JP10 Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm
+ U6 Package_SO:MSOP-8_3x3mm_P0.65mm
+ C7 Capacitor_SMD:C_0603_1608Metric
+ C8 Capacitor_SMD:C_0603_1608Metric
+ R11 Resistor_SMD:R_0603_1608Metric
+ R12 Resistor_SMD:R_0603_1608Metric
+ JP12 Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm
+ JP13 Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm
+ R13 Resistor_SMD:R_0603_1608Metric
+ C9 Capacitor_SMD:C_0603_1608Metric
+ C10 Capacitor_SMD:C_0603_1608Metric
+ C11 Capacitor_SMD:C_0603_1608Metric
+ JP14 Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm
+ P1 pad:R503_POT
+ UP1 pad:GAMEBOY_BUTTON_PAD-D6MM
+ LEFT1 pad:GAMEBOY_BUTTON_PAD-D6MM
+ DOWN1 pad:GAMEBOY_BUTTON_PAD-D6MM
+ RIGHT1 pad:GAMEBOY_BUTTON_PAD-D6MM
+ SELECT1 pad:GAMEBOY_BUTTON_PAD-DUAL_D4MM
+ START1 pad:GAMEBOY_BUTTON_PAD-DUAL_D4MM
+ B1 pad:GAMEBOY_BUTTON_PAD-D6MM
+ A1 pad:GAMEBOY_BUTTON_PAD-D6MM
+ LCD1 pad:MSP_TFT_LCD
+ C12 Capacitor_SMD:C_0603_1608Metric
+ Q1 Package_TO_SOT_SMD:SOT-23
+ R14 Resistor_SMD:R_0603_1608Metric
+ R15 Resistor_SMD:R_0603_1608Metric
+ U7 Package_TO_SOT_SMD:SOT-23
+ JP6 Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm
+ JP7 Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm
+
+*NET*
+*SIGNAL* /PWM_AUDIO_OUT
+ R2.2
+ JP1.2
+*SIGNAL* /GPIO_INTA
+ JP5.2
+ U1.20
+*SIGNAL* /GPIO_INTA_PI
+ JP5.1
+ J5.15
+*SIGNAL* /GPIO_SDA_PI
+ JP3.1
+ J5.3
+*SIGNAL* /GPIO_SCK_PI
+ JP2.1
+ J5.5
+*SIGNAL* /GPIO_SCK
+ JP2.2
+ U1.12
+*SIGNAL* /GPIO_SDA
+ JP3.2
+ U1.13
+*SIGNAL* /GPIO_INTB
+ U1.19
+ JP4.2
+*SIGNAL* Net-(J5-Pad33)
+ J5.33
+ JP1.1
+*SIGNAL* /RIGHT
+ RIGHT1.1
+ U1.22
+*SIGNAL* /TP4056_LIPO_BOOST/BAT-
+ U4.3
+ U3.6
+ J8.1
+ C3.2
+*SIGNAL* /TP4056_LIPO_BOOST/BAT+
+ R7.1
+ U2.5
+ JP9.1
+ J8.2
+*SIGNAL* /TP4056_LIPO_BOOST/5V_BOOST
+ JP8.1
+ SW1.2
+ R9.1
+ D5.1
+ C6.1
+*SIGNAL* Net-(J3-Pad1)
+ U1.1
+ J3.1
+*SIGNAL* Net-(J3-Pad2)
+ J3.2
+ U1.2
+*SIGNAL* Net-(J3-Pad3)
+ J3.3
+ U1.3
+*SIGNAL* Net-(J3-Pad4)
+ J3.4
+ U1.4
+*SIGNAL* Net-(J3-Pad5)
+ J3.5
+ U1.5
+*SIGNAL* Net-(J3-Pad6)
+ U1.6
+ J3.6
+*SIGNAL* Net-(J3-Pad7)
+ U1.7
+ J3.7
+*SIGNAL* Net-(J3-Pad8)
+ U1.8
+ J3.8
+*SIGNAL* Net-(J2-Pad1)
+ J4.1
+ J2.1
+*SIGNAL* Net-(J2-Pad2)
+ J2.2
+ J4.2
+*SIGNAL* Net-(J2-Pad3)
+ J4.3
+ J2.3
+*SIGNAL* GND
+ J7.6
+ J7.5
+ C5.2
+ R8.2
+ J5.34
+ J5.30
+ R6.2
+ D1.1
+ U2.1
+ U2.3
+ C6.2
+ U5.2
+ J5.39
+ A1.2
+ LCD1.8
+ C12.2
+ LCD1.1
+ B1.2
+ U7.1
+ UP1.2
+ LEFT1.2
+ DOWN1.2
+ RIGHT1.2
+ SELECT1.2
+ START1.2
+ U4.1
+ C9.2
+ C11.2
+ C10.2
+ C4.2
+ R10.2
+ Q1.1
+ U6.7
+ R3.1
+ C1.2
+ JP14.2
+ J2.4
+ J5.20
+ J5.6
+ J5.9
+ J2.5
+ J4.4
+ J5.14
+ J5.25
+ U1.10
+ U1.15
+ U1.16
+ U1.17
+*SIGNAL* +5V
+ SW1.1
+ U7.3
+ R1.1
+ JP13.1
+ U1.9
+ U1.18
+ J5.4
+ J5.2
+ JP8.2
+*SIGNAL* /TFT_RESET
+ J5.22
+ LCD1.2
+*SIGNAL* /TFT_SCK
+ J5.23
+ LCD1.3
+*SIGNAL* /TFT_DC
+ J5.18
+ LCD1.4
+*SIGNAL* /TFT_CS
+ LCD1.5
+ J5.24
+*SIGNAL* /TFT_MOSI
+ J5.19
+ LCD1.6
+*SIGNAL* /TFT_MISO
+ J5.21
+ LCD1.7
+*SIGNAL* /SELECT
+ SELECT1.1
+ U1.25
+*SIGNAL* /UP
+ U1.21
+ UP1.1
+*SIGNAL* /LEFT
+ LEFT1.1
+ U1.23
+*SIGNAL* /DOWN
+ U1.24
+ DOWN1.1
+*SIGNAL* /START
+ START1.1
+ U1.26
+*SIGNAL* /A
+ U1.28
+ A1.1
+*SIGNAL* /B
+ U1.27
+ B1.1
+*SIGNAL* +3V3
+ J5.1
+ J5.17
+ JP12.2
+*SIGNAL* /GPIO_INTB_PI
+ JP4.1
+ J5.16
+*SIGNAL* /TFT_BACKLIGHT_GPIO
+ J5.37
+ JP6.1
+*SIGNAL* Net-(R8-Pad1)
+ U3.2
+ R8.1
+*SIGNAL* Net-(D3-Pad2)
+ D4.2
+ D3.2
+ JP11.2
+*SIGNAL* Net-(C5-Pad1)
+ U2.8
+ U2.4
+ J7.1
+ JP11.1
+ C5.1
+*SIGNAL* Net-(U3-Pad3)
+ U4.6
+ U3.3
+*SIGNAL* Net-(U3-Pad1)
+ U4.4
+ U3.1
+*SIGNAL* Net-(R10-Pad1)
+ U5.3
+ R10.1
+ R9.2
+*SIGNAL* Net-(D1-Pad2)
+ R1.2
+ D1.2
+*SIGNAL* Net-(R5-Pad1)
+ U2.7
+ R5.1
+*SIGNAL* Net-(R4-Pad2)
+ U2.6
+ R4.2
+*SIGNAL* Net-(D4-Pad1)
+ D4.1
+ R5.2
+*SIGNAL* Net-(R6-Pad1)
+ R6.1
+ U2.2
+*SIGNAL* Net-(D3-Pad1)
+ D3.1
+ R4.1
+*SIGNAL* Net-(C4-Pad1)
+ U5.4
+ L1.1
+ C4.1
+ U5.5
+ JP9.2
+*SIGNAL* Net-(D5-Pad2)
+ L1.2
+ U5.1
+ D5.2
+*SIGNAL* Net-(C3-Pad1)
+ C3.1
+ U3.5
+ R7.2
+*SIGNAL* Net-(C10-Pad1)
+ U6.5
+ J1.1
+ C10.1
+*SIGNAL* Net-(C11-Pad1)
+ J1.2
+ C11.1
+ U6.8
+*SIGNAL* /audio/Audio_Vdd
+ C9.1
+ R13.1
+ JP12.1
+ JP13.2
+ U6.6
+*SIGNAL* Net-(R13-Pad2)
+ R13.2
+ U6.1
+*SIGNAL* Net-(C2-Pad1)
+ C2.1
+ P1.2
+ JP10.2
+*SIGNAL* Net-(C8-Pad2)
+ C8.2
+ JP14.1
+ P1.1
+*SIGNAL* Net-(C7-Pad1)
+ JP10.1
+ P1.4
+ C7.1
+*SIGNAL* Net-(C1-Pad1)
+ C2.2
+ C1.1
+ R3.2
+ R2.1
+*SIGNAL* Net-(R11-Pad1)
+ U6.3
+ R11.1
+*SIGNAL* Net-(R12-Pad2)
+ U6.4
+ R12.2
+*SIGNAL* Net-(C8-Pad1)
+ R12.1
+ C8.1
+*SIGNAL* Net-(C7-Pad2)
+ C7.2
+ R11.2
+*SIGNAL* Net-(Q1-Pad3)
+ Q1.3
+ R15.2
+*SIGNAL* Net-(Q1-Pad2)
+ Q1.2
+ R14.1
+*SIGNAL* /MSP_LCD/LED-K
+ LCD1.13
+ R15.1
+ LCD1.14
+ LCD1.11
+ LCD1.12
+*SIGNAL* /MSP_LCD/3.3_REG
+ LCD1.10
+ C12.1
+ LCD1.9
+ U7.2
+ JP7.1
+*SIGNAL* /MSP_LCD/TFT_BACKLIGHT
+ JP6.2
+ JP7.2
+ R14.2
+*END*
